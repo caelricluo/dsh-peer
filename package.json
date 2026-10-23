@@ -1,0 +1,73 @@
+{
+  "name": "@caelricluo/dsh-peer",
+  "version": "0.1.0",
+  "description": "Cross-harness peer bridge for DeepSeek Harness: let DSH, Claude Code and Codex agents talk to each other with explicit model, reasoning-effort and context control.",
+  "type": "module",
+  "main": "lib/index.js",
+  "bin": {
+    "peer": "bin/peer.mjs"
+  },
+  "exports": {
+    ".": "./lib/index.js",
+    "./protocol": "./lib/protocol.js",
+    "./store": "./lib/store.js",
+    "./bridge": "./lib/bridge.js",
+    "./cli": "./lib/cli.js",
+    "./adapters": "./lib/adapters/index.js",
+    "./package.json": "./package.json"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "files": [
+    "lib",
+    "bin",
+    "skills",
+    "scripts",
+    "cordis.patch.yml",
+    "README.md",
+    "INSTALL.md",
+    "docs",
+    "CONTRACT.md"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "author": "caelricluo",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/caelricluo/dsh-peer.git"
+  },
+  "homepage": "https://github.com/caelricluo/dsh-peer#readme",
+  "bugs": {
+    "url": "https://github.com/caelricluo/dsh-peer/issues"
+  },
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "dsh-plugin",
+    "claude-code",
+    "codex",
+    "agent",
+    "bridge",
+    "peer"
+  ],
+  "scripts": {
+    "test": "node --test test/*.test.mjs",
+    "install-skill": "node scripts/install-skill.mjs"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "^4.0.1"
+  },
+  "peerDependenciesMeta": {
+    "@deepseek-ai/cordis": {
+      "optional": true
+    }
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

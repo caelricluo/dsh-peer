@@ -1,0 +1,40 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Build and package artifacts
+*.tgz
+dist/
+coverage/
+.nyc_output/
+
+# Runtime state: never commit thread logs or bridge tokens
+.dsh-peer/
+peer-home/
+*.sock
+*.pid
+
+# Logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+yarn-error.log*
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*~
+
+# Secrets and local environment
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Temporary test output
+test/tmp/
+tmp/

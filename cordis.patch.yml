@@ -1,0 +1,10 @@
+# @caelricluo/dsh-peer bundle patch.
+# Loaded automatically when this package is listed in `dsh.profile.bundles`
+# (added by `dsh plugin --profile <profile> add <spec>`).
+#
+# The row mounts the cross-harness bridge: it starts the loopback HTTP bridge,
+# registers the five model-facing peer tools, and delivers guest messages into
+# live DSH sessions. See CONTRACT.md sections 8 and 9.
+- insert:
+    - id: dsh-peer
+      name: '@caelricluo/dsh-peer'
